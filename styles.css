@@ -39,7 +39,9 @@ body {
 
 input#InputPedidoParaIa,
 input#InputSubmit {
-  width: 80%;
+  width: 90%;
+  padding: .5%;
+  margin: 1%;
 }
 
 #editor,
