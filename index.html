@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Gerador de diagramas utilizando inteligência artificial</title>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width" />
+ 
+    <link rel="stylesheet" href="styles.css" />
+    <script type="module" src="script.js"></script>
+ 
+      <meta charset="UTF-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <title>Mermaid Playground em Tempo Real</title>
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/mermaid/9.3.0/mermaid.min.js"></script>
+ 
+  </head>
+  <body>
+    <div class="ContainerCentralizar">
+      <h1> Gerador de diagramas com I.A</h1>
+      <input type="text" id="InputPedidoParaIa" placeholder="✨ Faça seu pedido para a I.A" maxlength="200"></input>
+      <input id="InputSubmit" type="submit">
+
+    </div>
+ 
+
+
+      <div id="principal">
+
+      <pre id="editor" contenteditable="true">
+  graph TD
+      A[Cliente] -->|Coloca pedido| B(Cozinha)
+      B --> C{Está pronto?}
+      C -->|Sim| D[Enviar para entrega]
+      C -->|Não| B
+      </pre>
+      <div id="output-container">
+          <div id="output"></div>
+      </div>
+    </div>    
+    
+    
+    <div class="ContainerCentralizar"  >
+    <button id="zoom-in">🔍➕ Zoom In</button>
+    <button id="zoom-out">🔍➖ Zoom Out</button>
+    </div>
+ 
+  </body>
+  </html>

@@ -1,0 +1,87 @@
+#principal {
+  display: flex;
+  flex-wrap: wrap;
+  height: 100vh;
+  margin: 0;
+  padding: 20px;
+  box-sizing: border-box;
+  gap: 20px;
+}
+
+#editor,
+#output-container {
+  flex: 1;
+  min-width: 50px;
+  max-width: 50%;
+}
+
+@media (max-width: 768px) {
+  #principal {
+    flex-direction: column;
+  }
+
+  #editor,
+  #output-container {
+    max-width: 100%;
+  }
+}
+
+h1,
+body {
+  font-family: 'Roboto', sans-serif;
+}
+
+.ContainerCentralizar {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+input#InputPedidoParaIa,
+input#InputSubmit {
+  width: 80%;
+}
+
+#editor,
+#output-container {
+  flex: 1;
+  margin: 10px;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
+#editor {
+  font-family: monospace;
+  white-space: pre-wrap;
+  overflow-y: auto;
+  resize: none;
+  background-color: #f5f5f5;
+}
+#output-container {
+  overflow: hidden;
+  position: relative;
+}
+#output {
+  position: absolute;
+  top: 0;
+  left: 0;
+  cursor: move;
+}
+.keyword {
+  color: #007acc;
+}
+.node {
+  color: #d73a49;
+}
+.edge {
+  color: #6f42c1;
+}
+.string {
+  color: #22863a;
+}
+
+#output-container {
+  resize: both;
+  overflow: auto;
+  display: block;
+}
